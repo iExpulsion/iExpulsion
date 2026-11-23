@@ -39,20 +39,25 @@ One-button rotations: priority lists with triggers, modes and an on-screen Rotat
 - Tested outside the game with a Lua harness that mocks the client API; CI syntax-checks and packages each release.
 - Server-specific classes and spells come from a module, [RotationAssist-Synastria](https://github.com/iExpulsion/RotationAssist-Synastria).
 
-### [Synastria Companion](https://github.com/iExpulsion/SynastriaCompanion) and [Synastria Build Suite](https://github.com/iExpulsion/SynastriaBuildSuite)
+### [Synastria Companion](https://github.com/iExpulsion/SynastriaCompanion)
 
-<table>
-  <tr>
-    <td width="50%"><a href="https://github.com/iExpulsion/SynastriaCompanion"><img alt="Synastria Companion promo" src="assets/promos/companion.png"></a></td>
-    <td width="50%"><a href="https://github.com/iExpulsion/SynastriaBuildSuite"><img alt="Synastria Build Suite promo" src="assets/promos/buildsuite.png"></a></td>
-  </tr>
-</table>
+<a href="https://github.com/iExpulsion/SynastriaCompanion"><img alt="Synastria Companion promo" src="assets/promos/companion.png" width="100%"></a>
 
-Companion replaces the server's own windows with one consistent window; Build Suite saves, shares and applies character builds.
+Replaces the server's own windows with one consistent window: perks, transmog, attunes, loot and the resource bank.
 
-- Companion shares attune progress with friends over a paced message queue that stays well under the server's chat rate limit.
-- Build Suite imports the community's existing build formats and exports its own versioned share strings.
-- The two work alone or together through a small, documented API, never each other's internals.
+- Hooks the game's window functions, so the server's own buttons and spells open Companion instead, with a way back to the original.
+- Shares attune progress with friends over a paced message queue that stays well under the server's chat rate limit.
+- Works alone or beside Build Suite through a small, documented API, never the other's internals.
+
+### [Synastria Build Suite](https://github.com/iExpulsion/SynastriaBuildSuite)
+
+<a href="https://github.com/iExpulsion/SynastriaBuildSuite"><img alt="Synastria Build Suite promo" src="assets/promos/buildsuite.png" width="100%"></a>
+
+Saves, shares and applies whole character builds: perks, talents, glyphs, gear, affix priority and notes.
+
+- Imports the community's existing build formats and exports its own versioned share strings.
+- Applies a build only after showing every change it will make, with a talent calculator built from the game's own data.
+- Works alone or beside Companion through the same documented API.
 
 ### [MaterialCraftUI](https://github.com/iExpulsion/MaterialCraftUI)
 
